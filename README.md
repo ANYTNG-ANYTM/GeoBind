@@ -454,7 +454,7 @@ Returns `{"status": "ok"}` when the service is running and the model is loaded.
 
 ```bash
 # Download a protein-ligand complex (e.g. 2D3D – Acetylcholinesterase)
-curl -o protein.pdb https://files.rcsb.org/download/2D3D.pdb
+curl -o 2D3D.pdb https://files.rcsb.org/download/2D3D.pdb
 ```
 
 Or from Python:
