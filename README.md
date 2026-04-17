@@ -305,7 +305,7 @@ print(f"Ligand MW      : {ligand_meta['molecular_weight']:.2f} g/mol")
 
 Computes the **8-feature Complementarity Vector** that encodes the physical compatibility of a receptor-ligand pair:
 
-$$V = [\text{dist\_score},\ \text{angle\_score},\ \text{electrostatic\_energy},\ \text{hbond\_count},\ \text{hydrophobic\_score},\ \text{vdW\_score},\ \text{shape\_match},\ \text{pocket\_fit}]$$
+$$V = [\text{dist\\_score},\ \text{angle\\_score},\ \text{electrostatic\\_energy},\ \text{hbond\\_count},\ \text{hydrophobic\\_score},\ \text{vdW\\_score},\ \text{shape\\_match},\ \text{pocket\\_fit}]$$
 
 **Feature definitions:**
 
