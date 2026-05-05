@@ -165,7 +165,7 @@ venv\Scripts\Activate.ps1
 ### 3. Install dependencies
 
 ```bash
-pip install --upgrade pip
+python pip install --upgrade pip   # use python3 for Linux/macOS
 pip install -r requirements.txt
 ```
 
