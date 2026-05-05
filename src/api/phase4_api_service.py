@@ -8,6 +8,7 @@ from fastapi.responses import JSONResponse, FileResponse
 from pydantic import BaseModel, Field
 from typing import List, Optional, Dict, Any
 import numpy as np
+import sys
 import joblib
 import os
 import logging
@@ -16,6 +17,8 @@ import tempfile
 import shutil
 from datetime import datetime
 import json
+from dataclasses import dataclass
+from sklearn.preprocessing import StandardScaler
 
 # Import GeoBind pipeline modules
 from src.core.phase1_data_ingestion import ReceptorParser, LigandParser
@@ -31,6 +34,14 @@ app = FastAPI(
     description="Predicts protein-ligand binding affinity using complementarity metrics and XGBoost",
     version="4.0.0"
 )
+
+@dataclass
+class TrainingArtifacts:
+    """Persistent training artifacts."""
+    model: object
+    scaler: StandardScaler
+    feature_names: List[str]
+    metadata: Dict
 
 # ============================================================================
 # Pydantic Models for Request/Response
@@ -87,6 +98,10 @@ def load_model():
         raise FileNotFoundError(f"Model not found at {MODEL_PATH}")
     
     try:
+        main_module = sys.modules.get("__main__")
+        if main_module is not None and not hasattr(main_module, "TrainingArtifacts"):
+            setattr(main_module, "TrainingArtifacts", TrainingArtifacts)
+
         artifacts = joblib.load(MODEL_PATH)
         # Handle both dictionary format (legacy) and object format (current)
         if isinstance(artifacts, dict):

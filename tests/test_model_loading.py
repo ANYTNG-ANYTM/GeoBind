@@ -6,7 +6,7 @@ import joblib
 
 print("Testing model loading...")
 try:
-    artifacts = joblib.load('models/master_optimized/geobind_xgb_optimized.pkl')
+    artifacts = joblib.load("../models/master_optimized/geobind_xgb_optimized.pkl")
     print('✅ Model loaded successfully!')
     print(f'   Type: {type(artifacts).__name__}')
     print(f'   Has model: {hasattr(artifacts, "model")}')
