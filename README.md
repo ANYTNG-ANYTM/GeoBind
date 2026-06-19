@@ -478,6 +478,14 @@ create_minimal_test_ligand("test_ligand.sdf") # Benzene
 
 ---
 
+## Team Members:
+- Yash Pratap Singh (https://github.com/ANYTNG-ANYTM)
+- Devansh Singh (https://github.com/Devansh-04)
+- Harshwardhan Patil (https://github.com/Torpid-Quark)
+- Sahaj Kumar (https://github.com/k-sahaj)
+
+---
+
 ## License
 
 This project is licensed under the **MIT License**.  
