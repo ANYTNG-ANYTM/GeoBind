@@ -482,7 +482,8 @@ create_minimal_test_ligand("test_ligand.sdf") # Benzene
 - Yash Pratap Singh (https://github.com/ANYTNG-ANYTM)
 - Devansh Singh (https://github.com/Devansh-04)
 - Sahaj Kumar (https://github.com/k-sahaj)
-- Harshvardhan Patil (https://github.com/Torpid-Quark)
+- Harshvardhan Patil (https://github.com/Torpid-Quark) 
+
 
 ---
 
